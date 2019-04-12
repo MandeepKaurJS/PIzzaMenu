@@ -139,8 +139,8 @@ function getCrust(runningTotal,crusttext) {
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 };
 function hide()	{
-   // var reset=document.getElementById("totalPrice2").reset();
-   // var reset=document.getElementById("showText2").reset();
+   document.getElementById("totalPrice2").innerHTML="";
+   document.getElementById("showText2").innerHTML="";
     var show1=document.getElementById("title1").style.display="none";
     var show1=document.getElementById("totalPrice1").style.display="none";
 }
