@@ -47,7 +47,8 @@ input[type="radio" i] {
       height:200px;
     }
     #title1 {
-        color: #fff;
+        display:block;
+        color:#000;
         flex: 1 250px;
         height: 50px;
         width: 250px;
@@ -57,7 +58,7 @@ input[type="radio" i] {
         text-shadow: 1.5px 1.5px 5px #00f, 1px 1px 5px #000;
     }
     #title2 {
-        color: #fff;
+        color:#000;
         flex: 1 250px;
         height: 50px;
         width: 250px;
@@ -67,6 +68,7 @@ input[type="radio" i] {
         text-shadow: 1.5px 1.5px 5px #00f, 1px 1px 5px #000;
     }
     #showText1 {
+        display: block;
         font-size: 13px;
         flex: 1 250px;
         padding: 1px 0 10px 10px;
@@ -76,6 +78,7 @@ input[type="radio" i] {
     #showText2 {
         font-size: 13px;
         flex: 1 250px;
+        color: aliceblue;
         padding: 1px 0 10px 10px;
         width: 250px;
         border-radius: 0 0 0 0;
@@ -88,6 +91,7 @@ input[type="radio" i] {
     }
     #totalPrice2 {
         flex: 1 250px;
+        color: aliceblue;
         font-weight: bold;
         padding: 20px 0 10px 10px;
         width: 250px;
