@@ -5,7 +5,9 @@ var text1 = "";
 	var arr;
 	var meatarr=[];
 	var vegarr = [];
-	text1 = "";
+    text1 = "";
+    var show1=document.getElementById("title1").style.display="block";
+    var show1=document.getElementById("totalPrice1").style.display="block";
 	var sizeArray = document.getElementsByClassName("size");
  	for (var i = 0; i < sizeArray.length; i++) {
 		if (sizeArray[i].checked) {
@@ -136,4 +138,9 @@ function getCrust(runningTotal,crusttext) {
 	console.log("subtotal: $"+runningTotal+".00");
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 };
-		
+function hide()	{
+   // var reset=document.getElementById("totalPrice2").reset();
+   // var reset=document.getElementById("showText2").reset();
+    var show1=document.getElementById("title1").style.display="none";
+    var show1=document.getElementById("totalPrice1").style.display="none";
+}
