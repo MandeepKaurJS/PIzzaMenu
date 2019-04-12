@@ -24,14 +24,13 @@
 	}
 	runningTotal = sizeTotal;
 	console.log(selectedSize+" = $"+sizeTotal+".00");
-	console.log(text1);
-    console.log( "$"+runningTotal+".00");
-    document.getElementById("showText2").innerHTML=text1;
-	document.getElementById("totalPrice2").innerHTML = "$"+runningTotal+".00";
+	console.log("size text1: "+text1);
+	console.log("subtotal: $"+runningTotal+".00");
     getMeat(runningTotal,text1);
     getCheese(runningTotal,text1);
     getSauce(runningTotal.text1);
     getVeggies(runningTotal,text1);
+    getCrust(runningTotal,text11);
      // All three of these variables will be passed on to each function
 };
        
@@ -91,24 +90,19 @@ function getCheese(runningTotal,text1){
     var cheeseArray=document.getElementsByClassName("cheese");
     for(var m=0;m<cheeseArray.length;m++){
         if(cheeseArray[m].checked){
-            selectedveg.puch(cheeseArray[k].value);
-            console.log("Selected veggies Items:("+cheeseArray[m].value+")");
+            selectedCheese=cheeseArray[k].value;
             text1=text1+cheeseArray[m].value+"<br>";
         }
     }
-    var cheeseCount=selectedCheese.length;
-    if(cheeseCount>1){
-        cheeseTotal=(cheeseTotal+1);
-    }else{
-        cheeseTotal=0;
-    }
+    if(selectedCheese==="Extra Cheese"){
+		cheeseTotal=3;
+	}
     runningTotal=(runningTotal+cheeseTotal);
-    console.log("total selected veg items:"+cheeseCount);
-    console.log(cheeseCount+"veggies-1 free veg="+"$"+cheeseTotal+".00");
-    console.log("cheese text1:"+text1);
-    console.log("purchase Total:"+"$"+runningTotal+".00");
+    console.log("size text1: "+text1);
+	console.log("subtotal: $"+runningTotal+".00");
+	console.log("Purchase Total: "+"$"+runningTotal+".00");
     document.getElementById("showtext2").innerHTML=text1;
-    document.getElementById("totalPrice2").innerHTML="<h3>Total: <Strong> $"+runningTotal+".00"+"</strong></h3>";
+    document.getElementById("totalPrice2").innerHTML=" $"+runningTotal+".00";
 };	
 function getSauce(runningTotal,text1){
     var sauceTotal=0;
@@ -133,6 +127,28 @@ function getSauce(runningTotal,text1){
     console.log("cheese text1:"+text1);
     console.log("purchase Total:"+"$"+runningTotal+".00");
     document.getElementById("showtext2").innerHTML=text1;
-    document.getElementById("totalPrice2").innerHTML="<h3>Total: <Strong> $"+runningTotal+".00"+"</strong></h3>";
+    document.getElementById("totalPrice2").innerHTML="$"+runningTotal+".00";
 };	
+function getCrust(runningTotal,text1) {
+	var crustTotal = 0;
+	var selectedcrust = [];
+	var crustArray = document.getElementsByClassName("crust");
+	for (var j = 0; j < crustArray.length; j++) {
+		if (crustArray[j].checked) {
+			selectedcrust=crustArray[j].value;
+			text1 = text1+crustArray[j].value+"<br>";
+		}
+	}
+	
+	if(selectedcrust==="Cheese Stuffed Crust"){
+		crustTotal=3;
+	}
+	runningTotal = (total+ crustTotal);
+	console.log(selectedcrust+" = $"+crustTotal+".00");
+	console.log("size text1: "+text1);
+	console.log("subtotal: $"+runningTotal+".00");
+	console.log("Purchase Total: "+"$"+runningTotal+".00");
+	document.getElementById("showText").innerHTML=text1;
+	document.getElementById("totalPrice").innerHTML = "$"+runningTotal+".00";
+};
 		
