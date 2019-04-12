@@ -57,7 +57,7 @@ var text1 = "";
 	runningTotal = (runningTotal + meatTotal);
 	console.log("total selected meat items: "+meatCount);
 	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
-	text1 = text1 +""+arr;
+	text1 = text1 +""+arr+"<br>";
 	//console.log("meat text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
  }
@@ -118,21 +118,21 @@ function getCrust(runningTotal,crusttext) {
 	for (var j = 0; j < crustArray.length; j++) {
 		if (crustArray[j].checked) {
 			selectedcrust=crustArray[j].value;
-			id = crustArray[j].id;
-			var arr = id.split("-");
-			console.log(selectedcrust);
-			console.log(arr[j]);
-            text1 = text1+selectedcrust +"<br>";
+			//id = crustArray[j].id;
+			//var arr = id.split("-");
+			//console.log(selectedcrust);
+			//console.log(arr[j]);
+           // text1 = text1+selectedcrust +"<br>";
         }
-	}
+    }
 	
-	//if(crusttext==="Cheese Stuffed Crust"){
-		//crustTotal=3;
-	//}
-    //console.log(crustTotal);
+	if(selectedcrust=="Cheese Stuffed Crust"){
+		crustTotal=3;
+	}
+    console.log(crustTotal);
     console.log("subtotal"+runningTotal);
     runningTotal = (runningTotal+ crustTotal);
-    //text1=text1+""+crusttext;
+    text1=text1+""+crusttext;
 	console.log("subtotal: $"+runningTotal+".00");
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 };
