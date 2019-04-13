@@ -89,11 +89,12 @@ var text1 = "";
 
 	console.log("runningTotal: "+runningTotal);
     runningTotal=runningTotal+cheeseTotal;
-
     console.log("runningTotal: "+runningTotal);
     text1 = text1+""+cheestext+"<br>";
 	console.log("subtotal: $"+runningTotal+".00");
-	console.log("Purchase Total: "+"$"+runningTotal+".00");
+    console.log("Purchase Total: "+"$"+runningTotal+".00");
+    document.getElementById("showText1").style.textAlign="right";
+    document.getElementById("showText1").innerHTML=runningTotal;
   
 };
 
@@ -112,31 +113,36 @@ function getSauce(runningTotal,saucetext){
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 };	
 
-function getCrust(runningTotal,crusttext) {
+function getCrust(tol,crusttext) {
+    runningTotal=tol;
     var crustTotal = 0;
     var selectedcrust = [];
     var id="";
-	var crustArray = document.getElementsByClassName("crust");
-	for (var j = 0; j < crustArray.length; j++) {
-		if (crustArray[j].checked) {
-			selectedcrust=crustArray[j].value;
+	//var crustArray = document.getElementsByClassName("crust");
+	//for (var j = 0; j < crustArray.length; j++) {
+		//if (crustArray[j].checked) {
+		//	selectedcrust=crustArray[j].value;
 			//id = crustArray[j].id;
 			//var arr = id.split("-");
 			//console.log(selectedcrust);
 			//console.log(arr[j]);
            // text1 = text1+selectedcrust +"<br>";
-        }
-    }
+      //  }
+    //}
 	
-	if(selectedcrust=="Cheese Stuffed Crust"){
-		crustTotal=3;
+	if(crusttext=="Cheese Stuffed Crust"){
+        crustTotal=3;
+
 	}
-    console.log(crustTotal);
+    
     console.log("subtotal"+runningTotal);
     runningTotal = (runningTotal+ crustTotal);
+    //document.getElementById("showText1").innerHTML=crustTotal;
     text1=text1+""+crusttext;
 	console.log("subtotal: $"+runningTotal+".00");
-	console.log("Purchase Total: "+"$"+runningTotal+".00");
+    console.log("Purchase Total: "+"$"+runningTotal+".00");
+    document.getElementById("showText2").innerHTML=runningTotal;
+    
 };
 function hide()	{
    document.getElementById("totalPrice2").innerHTML="";

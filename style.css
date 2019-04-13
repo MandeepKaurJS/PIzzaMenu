@@ -68,7 +68,7 @@ input[type="radio" i] {
         text-shadow: 1.5px 1.5px 5px #00f, 1px 1px 5px #000;
     }
     #showText1 {
-        display: none;
+        color: aliceblue;
         font-size: 13px;
         flex: 1 250px;
         padding: 1px 0 10px 10px;
